@@ -25,7 +25,7 @@ class Admin {
         localStorage.removeItem("email");
         localStorage.removeItem("password");
 
-        location.href = ("login.html");
+        location.href = ("index.html");
     }
 
 
@@ -71,13 +71,26 @@ class Admin {
 
         if (emailForm != email) {
 
-                Swal.fire({
+                /*Swal.fire({
                     title: "Credenciales incorrectas",
                     text: "El email ingresado es incorrecto",
                     icon: "error",
                     showCancelButton: true,
-                });
+                });*/
           
+                Swal.fire({
+                    title: "Usuario no encontrado",
+                    text: "Verifica tu email o registrate",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonText: "Registrarme",
+                    cancelButtonText: "Cancelar",
+                    reverseButtons: true
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        location.href = "register.html";
+                    }
+                });
 
         } else if (passwordForm != password) {
                 Swal.fire({

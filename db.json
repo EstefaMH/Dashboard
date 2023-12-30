@@ -23,6 +23,24 @@
       "password": "123456",
       "email": "pruebaa@gmail.com",
       "id": 4
+    },
+    {
+      "userName": "laura",
+      "password": "123456",
+      "email": "correo@gmail.com",
+      "id": 5
+    },
+    {
+      "userName": "laura",
+      "password": "123",
+      "email": "pruebat@gmail.com",
+      "id": 6
+    },
+    {
+      "userName": "lauraf",
+      "password": "123",
+      "email": "pruebam@gmail.com",
+      "id": 7
     }
   ],
   "productos": {
