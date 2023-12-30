@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Costos - SB Admin</title>
+    <title>Costos - Admin</title>
     <link href="styles/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
@@ -27,9 +27,8 @@
                         <li class="breadcrumb-item active">Costos</li>
                     </ol>
                     <div class="card mb-4">
-                        <button onclick="getAdmin()">admin</button>
                         <div class="card-body">
-                            <form name="form_costs" class="form_costs" id="form_costs" onsubmit="submitFormCosts()">
+                            <form name="form_costs" class="form_costs" id="form_costs" onsubmit="submitFormCosts()" method="dialog">
                                 <fieldset id="fixed_costs_container" class="costs_fieldset">
                                     <legend>Costos Fijos</legend>
                                     <input required min="0" name="arriendo" type="number"
@@ -79,13 +78,24 @@
         crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-        <script src="js/scripts.js"></script>
+    <script src="js/scripts.js"></script>
+    
     <script src="components/NavBar.js"></script>
     <script src="components/Footer.js"></script>
     <script src="components/SideBar.js"></script>
+    
     <script src="services/GET/getAdmin.js"></script>
+    <script src="services/POST/postCosts.js"></script>
+
     <script src="handlers/Logout.js"></script>
+    <script src="handlers/Costs/Range.js"></script>
+
     <script src="models/Admin.js"></script>
+    <script src="models/Costs.js"></script>
+    
+    <script src="functions/Costs/Costs.js"></script>
+    <script src="functions/Costs/ValidationCosts.js"></script>
+
 </body>
 
 </html>

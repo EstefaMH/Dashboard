@@ -43,10 +43,41 @@
       "id": 7
     }
   ],
-  "productos": {
-    "userName": "lauraf",
-    "password": "123",
-    "email": "prueba1@gmail.com",
-    "id": 3
-  }
+  "costos": [
+    {
+      "name": "arriendo",
+      "value": "100",
+      "id": 1
+    },
+    {
+      "name": "nomina",
+      "value": "100",
+      "id": 2
+    },
+    {
+      "name": "impuestos",
+      "value": "100",
+      "id": 3
+    },
+    {
+      "name": "agua",
+      "value": "100",
+      "id": 4
+    },
+    {
+      "name": "gas",
+      "value": "100",
+      "id": 5
+    },
+    {
+      "name": "luz",
+      "value": "100",
+      "id": 6
+    },
+    {
+      "name": "agua",
+      "value": "100",
+      "id": 7
+    }
+  ]
 }
