@@ -8,6 +8,7 @@ Instalación
 Para instalar el proyecto, ejecuta los siguientes comandos:
 
 git clone https://github.com/https://github.com/EstefaMH/Dashboard.git/
+
 npm install
 
 Levantamiento de la API falsa
