@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Sidenav Light - SB Admin</title>
+    <link href="styles/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="sb-nav-fixed">
+    <navbar-component></navbar-component>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <sidebar-component></bar-component>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4">Sidenav Light</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Sidenav Light</li>
+                    </ol>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <form name="form_costs" class="form_costs" id="form_costs" onsubmit="submitFormCosts()">
+                                <fieldset id="fixed_costs_container" class="costs_fieldset">
+                                    <legend>Costos Fijos</legend>
+                                    <input required min="0" name="arriendo" type="number"
+                                        placeholder="Ingrese el costo del arriendo" />
+                                    <input required min="0" name="nomina" type="number"
+                                        placeholder="Ingrese su costo de nomina" />
+                                    <input required min="0" name="impuestos" type="number"
+                                        placeholder="Cuanto paga de impuestos" />
+                                    <button onclick="addCost('fixed_costs_container')" id="add_fixed_cost">Agregar costo
+                                        fijo</button>
+                                </fieldset>
+
+                                <fieldset id="variable_costs_container" class="costs_fieldset">
+                                    <legend>Costos Variables</legend>
+                                    <input required min="0" name="agua" type="number"
+                                        placeholder="Ingrese el costo del recibo del agua" />
+                                    <input required min="0" name="gas" type="number"
+                                        placeholder="Ingrese el costo del gas" />
+                                    <input required min="0" name="luz" type="number"
+                                        placeholder="Ingrese el costo del recibo de la luz" />
+                                    <button onclick="addCost('variable_costs_container')" id="add_variable_cost">Agregar
+                                        costo variable</button>
+                                </fieldset>
+
+                                <fieldset id="" class="costs_fieldset">
+                                    <legend>Margen de ganancia</legend>
+                                    <input required min="0" name="agua" type="number"
+                                        placeholder="Ingrese su margen de ganancia" />
+                                </fieldset>
+
+                                <input id="range" type="range" value="0" step="1" min="0" max="10000"
+                                    onchange="getRange()" />
+                                <label>Value: <span id="value_range">0</span></label>
+
+
+
+                                <button type="submit" class="btn_form_costs">Calcular</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer-component></footer-component>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="components/NavBar.js"></script>
+    <script src="components/Footer.js"></script>
+</body>
+
+</html>

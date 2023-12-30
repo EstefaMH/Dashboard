@@ -1,0 +1,25 @@
+{
+  "admin": [
+    {
+      "userName": "a",
+      "password": "p",
+      "email": "a@gmail.com",
+      "id": 1
+    },
+    {
+      "userName": "a",
+      "password": "1",
+      "email": "a@gmail.com",
+      "id": 2
+    },
+    {
+      "userName": "axxxx",
+      "password": "123456",
+      "email": "prueba@gmail.com",
+      "id": 2
+    }
+  ],
+  "productos": [
+    {}
+  ]
+}

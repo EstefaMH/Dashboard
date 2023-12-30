@@ -1,0 +1,87 @@
+class Admin {
+
+    constructor(userName, email, password) {
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
+    }
+
+    setUser(userName, email, password) {
+        localStorage.setItem("userName", userName);
+        localStorage.setItem("email", email);
+        localStorage.setItem("password", password);
+    }
+
+    removeUser() {
+        localStorage.removeItem("userName");
+        localStorage.removeItem("email");
+        localStorage.removeItem("password");
+
+        location.href = ("login.html");
+    }
+
+
+
+    async findUser(email) {
+        let response = await fetch('http://localhost:3000/admin', {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        });
+        const data = await response.json();
+        console.log('Datos recibidos:', data);
+        return admin;
+    }
+
+    async validationCredentialsUser(emailForm, passwordForm) {
+
+        debugger
+        let user = await this.findUser(emailForm);
+        console.log(user);
+
+        if (user == undefined) {
+            Swal.fire({
+                title: "Usuario no encontrado",
+                text: "Verifica tu email o registrate",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Registrarme",
+                cancelButtonText: "Cancelar",
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.href = "register.html";
+                }
+            });
+        }
+
+
+        let { userName, password, email } = user
+
+
+        if (emailForm != email) {
+
+            Swal.fire({
+                title: "Credenciales incorrectas",
+                text: "El email ingresado es incorrecto",
+                icon: "error"
+            });
+
+        } else if (passwordForm != password) {
+            Swal.fire({
+                title: "Credenciales incorrectas",
+                text: "La contraseña ingresada es incorrecta",
+                icon: "error"
+            });
+
+        } else {
+            location.href = "dashboard.html";
+            this.setUser(userName, email, password)
+        }
+    }
+
+}
+
+
+

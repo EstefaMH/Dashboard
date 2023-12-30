@@ -1,0 +1,36 @@
+async function submitFormRegister() {
+
+    const admin = new Admin();
+  
+  
+    let form = new FormData(form_register)
+    const jsonData = {};
+  
+    form.forEach((value, key) => {
+      jsonData[key] = value;
+    });
+  
+    admin.userName = jsonData['userName'];
+    admin.email = jsonData['email'];
+    admin.password = jsonData['password'];
+    
+    postAdmin(admin.userName,admin.password , admin.email)
+    
+  
+    
+  }
+  
+
+  
+  
+  
+  function submitRecoveryPassword() {
+    let form = new FormData(form_login);
+    const jsonData = {};
+  
+    form.forEach((value, key) => {
+      jsonData[key] = value;
+    });
+  
+  }
+  
